@@ -11,6 +11,18 @@ Summary: Library to enforce positional or key-word arguments
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/positional-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/positional-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/positional-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/positional-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/positional-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/positional-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/positional/badges/version.svg)](https://anaconda.org/conda-forge/positional)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/positional/badges/downloads.svg)](https://anaconda.org/conda-forge/positional)
+
 Installing positional
 =====================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `positional` available on your pla
 ```
 conda search positional --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/positional-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/positional-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/positional-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/positional-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/positional-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/positional-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/positional/badges/version.svg)](https://anaconda.org/conda-forge/positional)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/positional/badges/downloads.svg)](https://anaconda.org/conda-forge/positional)
 
 
 Updating positional-feedstock
