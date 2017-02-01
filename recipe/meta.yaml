@@ -1,19 +1,21 @@
 {%set name = "positional" %}
-{%set version = "1.1.0" %}
+{%set version = "1.1.1" %}
+{%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "e2d1e3a6a2abbc1820c5dfa72f0c8fc4b56eebbb6ccd7ee25b626c34b902c144" %}
+{%set hash_val = "ef845fa46ee5a11564750aaa09dd7db059aaf39c44c901b37181e5ffa67034b0" %}
+{%set build_num = "0" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  number: 0
+  number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 
@@ -30,11 +32,13 @@ requirements:
 
 test:
   imports:
-    - {{ name }}
+    - positional
 
 about:
   home: https://github.com/morganfainberg/positional
-  license: Apache Software License Version 2.0
+  license: Apache 2.0
+  license_family: Apache
+  license_file: LICENSE
   summary: 'Library to enforce positional or key-word arguments'
 
 extra:
