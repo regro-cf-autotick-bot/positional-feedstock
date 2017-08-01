@@ -1,8 +1,8 @@
 {%set name = "positional" %}
-{%set version = "1.1.1" %}
+{%set version = "1.1.2" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "ef845fa46ee5a11564750aaa09dd7db059aaf39c44c901b37181e5ffa67034b0" %}
+{%set hash_val = "14e5b502bad1bbccade474602ac773bd9d88aaf3b016985747ea992567f9597b" %}
 {%set build_num = "0" %}
 
 package:
