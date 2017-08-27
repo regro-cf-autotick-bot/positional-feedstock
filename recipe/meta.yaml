@@ -1,8 +1,8 @@
 {% set name = "positional" %}
-{% set version = "1.1.2" %}
+{% set version = "1.2.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "14e5b502bad1bbccade474602ac773bd9d88aaf3b016985747ea992567f9597b" %}
+{% set hash = "cf48ea169f6c39486d5efa0ce7126a97bed979a52af6261cf255a41f9a74453a" %}
 {% set build = 0 %}
 
 package:
