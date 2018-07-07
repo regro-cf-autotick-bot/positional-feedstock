@@ -3,7 +3,7 @@
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "cf48ea169f6c39486d5efa0ce7126a97bed979a52af6261cf255a41f9a74453a" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name }}
@@ -15,12 +15,14 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
+  noarch: python
   number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 
 requirements:
-  build:
+  host:
+    - pip
     - python
     - setuptools
     - pbr >=1.8
