@@ -1,9 +1,8 @@
 {% set name = "positional" %}
 {% set version = "1.2.1" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
 {% set hash = "cf48ea169f6c39486d5efa0ce7126a97bed979a52af6261cf255a41f9a74453a" %}
-{% set build = 1 %}
+{% set build = 2 %}
 
 package:
   name: {{ name }}
@@ -11,28 +10,30 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  sha256: {{ hash }}
 
 build:
   noarch: python
   number: {{ build }}
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
     - setuptools
     - pbr >=1.8
 
   run:
-    - python
+    - python >={{ python_min }}
     - pbr >=1.8
     - wrapt
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - positional
 
